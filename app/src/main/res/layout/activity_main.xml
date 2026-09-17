@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#080A0F">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp">
+        <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GD REACTION CAM 🥶" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/reaction" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:text="ГОТОВ СМОТРЕТЬ РАН 🥶" android:textColor="#FFFFFF" android:textSize="38sp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal">
+            <Button android:id="@+id/startCapture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Начать трансляцию"/>
+            <Button android:id="@+id/stopCapture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="Закончить трансляцию"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.camera.view.PreviewView android:id="@+id/cameraPreview" android:layout_width="220dp" android:layout_height="130dp" android:layout_gravity="top|end" android:layout_margin="18dp" app:scaleType="fillCenter"/>
+</FrameLayout>
