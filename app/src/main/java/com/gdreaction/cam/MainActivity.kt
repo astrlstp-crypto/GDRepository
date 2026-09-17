@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun startCamera() {
         val f = ProcessCameraProvider.getInstance(this)
-        f.addListener({ val p = f.get(); val preview = Preview.Builder().build().also { it.setSurfaceProvider(b.cameraPreview.surfaceProvider) }; p.unbindAll(); p.bindToLifecycle(this, CameraSelector.DEFAULT_FRONT_CAMERA, preview) }, ContextCompat.getMainExecutor(this))
+        f.addListener({ val p = f.get(); val preview = Preview.Builder().build().also { it.setSurfaceProvider(b.cameraPreview.surfaceProvider) }; p.unbindAll(); p.bindToLifecycle(this, CameraSelector.DEFAULT_BACK_CAMERA, preview) }, ContextCompat.getMainExecutor(this))
     }
     override fun onDestroy() { cameraExecutor.shutdown(); super.onDestroy() }
 }
